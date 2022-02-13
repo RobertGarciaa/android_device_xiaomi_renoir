@@ -352,4 +352,7 @@
         <item>960</item>  <!-- sensorLocationY -->
         <item>200</item>  <!-- sensorRadius -->
     </array>
+    
+    <!-- Doze: check proximity sensor before pulsing? -->
+    <bool name="doze_proximity_check_before_pulse">false</bool>
 </resources>
