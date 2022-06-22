@@ -438,6 +438,11 @@ vendor/lib64/vendor.xiaomi.hardware.cameraperf@1.0.so
 vendor/lib64/vendor.xiaomi.hardware.campostproc@1.0-service-impl.so
 vendor/lib64/vendor.xiaomi.hardware.campostproc@1.0.so
 
+# Camera face detection
+vendor/etc/camera/megviifacepp_0_5_2_model:vendor/etc/camera/facedetectpp_0_5_2_model
+vendor/lib64/libMegviiFacepp-0.5.2.so:vendor/lib64/libFaceDetectpp-0.5.2.so;FIX_SONAME
+vendor/lib64/libmegface.so:vendor/lib64/libfacedet.so;FIX_SONAME
+
 # Charger (Mi Turbo Charge)
 vendor/bin/batterysecret
 
