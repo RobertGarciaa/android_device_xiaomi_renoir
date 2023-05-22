@@ -7,6 +7,8 @@
 # Inherit from sm8350-common
 $(call inherit-product, device/xiaomi/sm8350-common/common.mk)
 
+COMMON_PATH := device/xiaomi/sm8350-common
+
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_platform_info_shimaidp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_shima/audio_platform_info_shimaidp.xml \
@@ -19,6 +21,10 @@ PRODUCT_COPY_FILES += \
 # Camera
 PRODUCT_PACKAGES += \
     Aperture
+
+# Power
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/power/powerhint_shima.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
