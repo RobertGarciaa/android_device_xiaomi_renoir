@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/derp_renoir.mk
+    $(LOCAL_DIR)/evolution_renoir.mk
 
 COMMON_LUNCH_CHOICES := \
-    derp_renoir-user \
-    derp_renoir-userdebug \
-    derp_renoir-eng
+    evolution_renoir-user \
+    evolution_renoir-userdebug \
+    evolution_renoir-eng
