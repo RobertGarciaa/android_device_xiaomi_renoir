@@ -10,7 +10,7 @@ DEVICE_PATH := device/xiaomi/renoir
 include device/xiaomi/sm8350-common/BoardConfigCommon.mk
 
 # Firmware
--include vendor/xiaomi-firmware/renoir/BoardConfigVendor.mk
+include vendor/xiaomi/renoir-firmware/BoardConfigVendor.mk
 
 # Board
 TARGET_BOOTLOADER_BOARD_NAME := renoir
