@@ -20,6 +20,9 @@ function blob_fixup() {
         vendor/lib64/vendor.xiaomi.hardware.cameraperf@1.0-impl.so)
             "${SIGSCAN}" -p "21 00 80 52 7c 00 00 94" -P "21 00 80 52 1F 20 03 D5" -f "${2}"
             ;;
+        vendor/lib64/libwa_sat.so)
+            sed -i 's/\/system\/lib64\([^\/]\)/\/vendor\/lib64\1/g' "${2}"
+            ;;
     esac
 }
 
