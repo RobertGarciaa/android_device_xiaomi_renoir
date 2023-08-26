@@ -23,7 +23,6 @@ PRODUCT_COPY_FILES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    DerpSettingsResOverlayRenoir \
     FrameworksResOverlayRenoir \
     SettingsProviderResOverlayRenoir \
     SettingsResOverlayRenoir \
