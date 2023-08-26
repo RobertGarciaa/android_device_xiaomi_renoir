@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from renoir V14.0.10.0.TKICNXM
+# Device proprietary files - from renoir_global MIUI V14.0.6.0.TKIMIXM package, unless pinned
 
 # ACDB
 vendor/etc/acdbdata/Forte/Forte_Bluetooth_cal.acdb

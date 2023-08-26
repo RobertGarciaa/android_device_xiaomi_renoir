@@ -17,21 +17,21 @@ $(call inherit-product, vendor/derp/config/common_full_phone.mk)
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := renoir
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_MODEL := M2101K9C
+PRODUCT_MODEL := M2101K9G
 PRODUCT_NAME := derp_renoir
 
 # DerpFest Stuffs
 TARGET_BOOT_ANIMATION_RES := 1080
 DERP_BUILDTYPE := Official
 
-PRODUCT_SYSTEM_NAME := renoir
+PRODUCT_SYSTEM_NAME := renoir_global
 PRODUCT_SYSTEM_DEVICE := renoir
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="renoir-user 13 RKQ1.211001.001 V14.0.9.0.TKICNXM release-keys" \
+    PRIVATE_BUILD_DESC="renoir_global-user 13 TKQ1.220829.002 V14.0.6.0.TKIMIXM release-keys" \
     TARGET_DEVICE=$(PRODUCT_SYSTEM_DEVICE) \
     TARGET_PRODUCT=$(PRODUCT_SYSTEM_NAME)
 
-BUILD_FINGERPRINT := Xiaomi/renoir/renoir:13/RKQ1.211001.001/V14.0.9.0.TKICNXM:user/release-keys
+BUILD_FINGERPRINT := Xiaomi/renoir_global/renoir:13/TKQ1.220829.002/V14.0.6.0.TKIMIXM:user/release-keys
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
