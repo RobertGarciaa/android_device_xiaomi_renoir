@@ -12,15 +12,20 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/renoir/device.mk)
 
 # Inherit some common PixelExperience stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := renoir
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := M2101K9G
-PRODUCT_NAME := aosp_renoir
+PRODUCT_NAME := evolution_renoir
+
+EVO_SIGNED := false
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_BOOT_ANIMATION_RES := 1080
 
 TARGET_GAPPS_ARCH := arm64
+TARGET_USES_MINI_GAPPS := true
 
 PRODUCT_SYSTEM_NAME := renoir_global
 PRODUCT_SYSTEM_DEVICE := renoir
