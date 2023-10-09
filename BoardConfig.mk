@@ -18,6 +18,9 @@ TARGET_OTA_ASSERT_DEVICE := renoir,renoir_global,renoir_jp,renoir_ru,renoir_eea_
 # Board
 TARGET_BOOTLOADER_BOARD_NAME := renoir
 
+# Camera
+TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED := true
+
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/hidl/manifest.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/hidl/framework_compatibility_matrix.xml
