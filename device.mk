@@ -22,12 +22,16 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/display/display_id_4630946545580055170.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/display_id_4630946545580055170.xml
 
 # Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-lineage
+
 PRODUCT_PACKAGES += \
+    EvoSettingsResOverlayRenoir \
     FrameworksResOverlayRenoir \
     SettingsProviderResOverlayRenoir \
     SettingsResOverlayRenoir \
     SystemUIResOverlayRenoir \
-    NfcResOverlayRenoir \
+    NfcResRenoir \
     WifiResOverlayRenoir
 
 # Soong namespaces
