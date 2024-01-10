@@ -14,9 +14,6 @@ $(call inherit-product, device/xiaomi/renoir/device.mk)
 # Inherit some common PixelExperience stuff.
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
-# Call the BCR setup
-$(call inherit-product-if-exists, vendor/bcr/bcr.mk)
-
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := renoir
 PRODUCT_MANUFACTURER := Xiaomi
