@@ -17,6 +17,9 @@ $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 # Call the AOSP Dialer setup
 $(call inherit-product, vendor/Dialer/Dialer.mk)
 
+# Viper
+$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
+
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := renoir
 PRODUCT_MANUFACTURER := Xiaomi
