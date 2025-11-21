@@ -9,6 +9,9 @@ $(call inherit-product, device/xiaomi/renoir/device.mk)
 # Inherit some common PixelOS stuff.
 $(call inherit-product, vendor/custom/config/common_full_phone.mk)
 
+# Inherit BCR
+$(call inherit-product, vendor/bcr/bcr.mk)
+
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := renoir
 PRODUCT_MANUFACTURER := Xiaomi
