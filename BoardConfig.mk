@@ -47,6 +47,10 @@ TARGET_ENABLE_XIAOMI_DOLBY ?= true
 ifeq ($(TARGET_ENABLE_XIAOMI_DOLBY),true)
 BOARD_VENDOR_SEPOLICY_DIRS += vendor/xiaomi/dolby-renoir/sepolicy/vendor
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += vendor/xiaomi/dolby-renoir/sepolicy/public
+# Declares vendor.dolby.hardware.dms@2.0::IDms/default, which the DMS manifest
+# fragment adds. Without it checkvintf rejects the device manifest.
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
+    vendor/xiaomi/dolby-renoir/configs/vintf/dolby_framework_compatibility_matrix.xml
 endif
 
 # Include proprietary files
