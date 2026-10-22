@@ -45,8 +45,8 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 # Match the product's explicit Dolby selection. false keeps stock audio.
 TARGET_ENABLE_XIAOMI_DOLBY ?= true
 ifeq ($(TARGET_ENABLE_XIAOMI_DOLBY),true)
-BOARD_VENDOR_SEPOLICY_DIRS += vendor/xiaomi/dolby/sepolicy/vendor
-SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += vendor/xiaomi/dolby/sepolicy/public
+BOARD_VENDOR_SEPOLICY_DIRS += vendor/xiaomi/dolby-renoir/sepolicy/vendor
+SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += vendor/xiaomi/dolby-renoir/sepolicy/public
 endif
 
 # Include proprietary files

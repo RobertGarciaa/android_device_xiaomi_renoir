@@ -11,7 +11,7 @@ $(call inherit-product, device/xiaomi/sm8350-common/common.mk)
 # Dolby Atmos: Redwood software DAP, DMS HAL, ported MiSound and the
 # Settings/QS entry. The flag also selects the stock-audio rollback path.
 ifeq ($(TARGET_ENABLE_XIAOMI_DOLBY),true)
-$(call inherit-product, vendor/xiaomi/dolby/dolby.mk)
+$(call inherit-product, vendor/xiaomi/dolby-renoir/dolby.mk)
 endif
 
 # Inherit MiuiCamera Makefile
