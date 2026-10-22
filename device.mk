@@ -3,8 +3,16 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+TARGET_ENABLE_XIAOMI_DOLBY ?= true
+
 # Inherit from sm8350-common
 $(call inherit-product, device/xiaomi/sm8350-common/common.mk)
+
+# Dolby Atmos: Redwood software DAP, DMS HAL, ported MiSound and the
+# Settings/QS entry. The flag also selects the stock-audio rollback path.
+ifeq ($(TARGET_ENABLE_XIAOMI_DOLBY),true)
+$(call inherit-product, vendor/xiaomi/dolby/dolby.mk)
+endif
 
 # Inherit MiuiCamera Makefile
 $(call inherit-product-if-exists, vendor/xiaomi/miuicamera-renoir/device.mk)
