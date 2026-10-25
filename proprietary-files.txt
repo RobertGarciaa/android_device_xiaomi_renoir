@@ -144,6 +144,12 @@ vendor/etc/camera/ellc.bin
 vendor/etc/camera/intsense_config_optical_zoom_2sat.bin
 vendor/etc/camera/mibokeh_855_opencl.bin
 vendor/etc/camera/mibokeh_855_parameter.bin
+vendor/etc/camera/model/dof_model/capture_model
+vendor/etc/camera/model/dof_model/capture_cache
+vendor/etc/camera/model/dof_model/capture_policy
+vendor/etc/camera/model/rt_model/preview_model
+vendor/etc/camera/model/rt_model/preview_cache
+vendor/etc/camera/model/rt_model/preview_policy
 vendor/etc/camera/model_back.dlc
 vendor/etc/camera/model_front.dlc
 vendor/etc/camera/model_front_mibokeh_video.dlc
