@@ -1,0 +1,30 @@
+# Seed the renoir stock depth models before the camera HAL starts.
+#
+# libwa_rtdof.so composes its model paths from /data/vendor/camera plus
+# capture_model / capture_cache / ldc_cap_model, so the vendor copies under
+# /vendor/etc/camera/model must be staged into the writable data path before
+# the camera provider starts. Without this the rear portrait depth path fails.
+on post-fs-data
+    mkdir /data/vendor/camera 0770 camera camera
+    mkdir /data/vendor/camera/model 0770 cameraserver camera
+    mkdir /data/vendor/camera/model/dof_model 0770 cameraserver camera
+    mkdir /data/vendor/camera/model/rt_model 0770 cameraserver camera
+    copy /vendor/etc/camera/model/dof_model/capture_model /data/vendor/camera/model/dof_model/capture_model
+    chown cameraserver camera /data/vendor/camera/model/dof_model/capture_model
+    chmod 0660 /data/vendor/camera/model/dof_model/capture_model
+    copy /vendor/etc/camera/model/dof_model/capture_cache /data/vendor/camera/model/dof_model/capture_cache
+    chown cameraserver camera /data/vendor/camera/model/dof_model/capture_cache
+    chmod 0660 /data/vendor/camera/model/dof_model/capture_cache
+    copy /vendor/etc/camera/model/dof_model/capture_policy /data/vendor/camera/model/dof_model/capture_policy
+    chown cameraserver camera /data/vendor/camera/model/dof_model/capture_policy
+    chmod 0660 /data/vendor/camera/model/dof_model/capture_policy
+    copy /vendor/etc/camera/model/rt_model/preview_model /data/vendor/camera/model/rt_model/preview_model
+    chown cameraserver camera /data/vendor/camera/model/rt_model/preview_model
+    chmod 0660 /data/vendor/camera/model/rt_model/preview_model
+    copy /vendor/etc/camera/model/rt_model/preview_cache /data/vendor/camera/model/rt_model/preview_cache
+    chown cameraserver camera /data/vendor/camera/model/rt_model/preview_cache
+    chmod 0660 /data/vendor/camera/model/rt_model/preview_cache
+    copy /vendor/etc/camera/model/rt_model/preview_policy /data/vendor/camera/model/rt_model/preview_policy
+    chown cameraserver camera /data/vendor/camera/model/rt_model/preview_policy
+    chmod 0660 /data/vendor/camera/model/rt_model/preview_policy
+    restorecon_recursive /data/vendor/camera/model

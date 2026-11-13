@@ -1,0 +1,9 @@
+# Stock depth-model data and writable algorithm cache, confined to model/.
+type vendor_renoir_camera_model_data_file, file_type, data_file_type;
+
+allow vendor_init vendor_renoir_camera_model_data_file:dir create_dir_perms;
+allow vendor_init vendor_renoir_camera_model_data_file:file create_file_perms;
+
+# The stock provider runs as cameraserver and updates its algorithm caches.
+allow hal_camera_default vendor_renoir_camera_model_data_file:dir rw_dir_perms;
+allow hal_camera_default vendor_renoir_camera_model_data_file:file create_file_perms;

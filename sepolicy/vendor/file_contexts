@@ -1,0 +1,2 @@
+# Depth models staged by init for the renoir camera HAL.
+/data/vendor/camera/model(/.*)?    u:object_r:vendor_renoir_camera_model_data_file:s0

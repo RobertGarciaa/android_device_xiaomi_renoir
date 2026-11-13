@@ -26,6 +26,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/sound_trigger_mixer_paths_shimaidp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_shima/sound_trigger_mixer_paths_shimaidp.xml \
     $(LOCAL_PATH)/audio/sound_trigger_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_shima/sound_trigger_platform_info.xml
 
+# Stock portrait depth models must be staged into the HAL's writable data path.
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/init.renoir.camera-models.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.renoir.camera-models.rc
+
 # Power
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/power/powerhint_shima.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
